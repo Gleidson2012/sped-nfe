@@ -68,6 +68,16 @@ class Tools extends BaseTools
     
     public static $PL_008i2 = 'PL_008i2';
 
+    /**
+     * @var string
+     */
+    protected $rootDir;
+
+    public function __construct($configJson = '')
+    {
+        parent::__construct($configJson);
+        $this->rootDir = dirname(__DIR__);
+    }
 
     /**
      * setModelo
